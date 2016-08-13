@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS Ahsin Saddique</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <ul class="nav nav-tabs" ng-init="active=1">
+    <li ng-class="{'active': active==1}" ng-click="active=1"><a href="#/view1">Home</a></li>
+    <li ng-class="{'active': active==2}" ng-click="active=2"><a href="#/view2">About</a></li>
+    <li ng-class="{'active': active==3}" ng-click="active=3"><a href="#/view2">Content</a></li>
+  </ul>
+
+  <div ng-view></div>
+
+
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+</body>
+</html>
